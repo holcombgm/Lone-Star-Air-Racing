@@ -1,143 +1,58 @@
-/* styles.css - classic aviation theme */
-:root{
-  --cream:#F6EFE6;
-  --navy:#002746;
-  --gold:#C49A2E;
-  --muted:#6b6b6b;
-  --card:#ffffff;
-  --maxw:1000px;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sponsors — Lone Star Air Racing</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo-mark">LS</div>
+        <div>
+          <div class="title">Lone Star Air Racing</div>
+          <div class="tagline">Sponsors</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="registration.html">Registration</a>
+        <a href="rules.html">Rules</a>
+        <a href="results.html">Results</a>
+        <a href="sponsors.html">Sponsors</a>
+      </nav>
+    </header>
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: "Georgia", "Times New Roman", serif;
-  background:linear-gradient(180deg,var(--cream),#fff);
-  color:var(--navy);
-  line-height:1.45;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
+    <section>
+      <div class="section-title"><h2>Our Sponsors</h2></div>
 
-/* container */
-.container{
-  width:90%;
-  max-width:var(--maxw);
-  margin:28px auto;
-  padding:28px;
-  background:rgba(255,255,255,0.85);
-  border-radius:10px;
-  box-shadow:0 8px 24px rgba(16,24,40,0.06);
-  border:1px solid rgba(2,22,45,0.04);
-}
+      <div class="section-card">
+        <p class="small">We gratefully acknowledge the support of our sponsors. Interested in sponsoring? Contact <a href="mailto:sponsors@lonestarairracing.example">sponsors@lonestarairracing.example</a>.</p>
 
-/* header */
-.header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  margin-bottom:18px;
-}
-.brand{
-  display:flex;
-  gap:14px;
-  align-items:center;
-}
-.logo-mark{
-  width:64px;height:64px;border-radius:8px;
-  background:linear-gradient(135deg,var(--navy),#12364a);
-  color:var(--cream);
-  display:flex;align-items:center;justify-content:center;
-  font-weight:700;font-size:20px;box-shadow:inset 0 -6px 0 rgba(0,0,0,0.06);
-}
-.title{
-  font-size:20px;font-weight:700;letter-spacing:0.6px;
-}
-.tagline{
-  font-size:12px;color:var(--muted);
-}
+        <ul class="clean">
+          <li><strong>FuelCo</strong> — Official fuel partner.</li>
+          <li><strong>WingWorks</strong> — Maintenance & inspection partner.</li>
+          <li><strong>AvionicsPro</strong> — Avionics sponsor.</li>
+          <li><strong>PilotGear</strong> — Pilot supplies & safety gear.</li>
+        </ul>
+      </div>
 
-/* nav */
-.nav{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  flex-wrap:wrap;
-}
-.nav a{
-  text-decoration:none;
-  color:var(--navy);
-  padding:8px 12px;
-  border-radius:6px;
-  font-size:14px;
-}
-.nav a:hover{background:rgba(0,39,70,0.06)}
-.nav a.active{
-  background:linear-gradient(90deg,var(--gold),#d4b35a);
-  color:#071220;
-  box-shadow:0 3px 8px rgba(0,0,0,0.08);
-}
+      <div class="section-card">
+        <h3>Become a Sponsor</h3>
+        <p class="note">Sponsorship opportunities include title sponsor, class sponsor, awards sponsor, and vendor booths. Packages start at $1,000 (example).</p>
+      </div>
+    </section>
 
-/* hero */
-.hero{
-  padding:18px;
-  border-radius:8px;
-  background:linear-gradient(180deg, rgba(0,39,70,0.03), rgba(196,154,46,0.02));
-  display:flex;
-  gap:18px;
-  align-items:center;
-  margin-bottom:20px;
-}
-.hero-left{flex:1}
-.hero h1{margin:0;font-size:32px;color:var(--navy)}
-.hero p{margin:8px 0;color:var(--muted)}
-.cta{
-  display:inline-block;
-  background:var(--navy);
-  color:var(--cream);
-  padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:700;
-  box-shadow:0 6px 18px rgba(2,22,45,0.08);
-}
+    <footer>
+      <div>© <span id="year"></span> Lone Star Air Racing</div>
+      <div class="small">Thanks to our partners for making the event possible.</div>
+    </footer>
+  </div>
 
-/* sections */
-.section-title{
-  display:flex;align-items:baseline;gap:12px;margin:12px 0 10px 0;
-}
-.section-title h2{margin:0;font-size:20px}
-.section-card{
-  background:var(--card);padding:16px;border-radius:8px;border:1px solid rgba(2,22,45,0.03);
-  margin-bottom:14px;
-}
-
-/* grid */
-.grid-2{display:grid;grid-template-columns:1fr 320px;gap:18px}
-@media (max-width:880px){.grid-2{grid-template-columns:1fr} .nav{justify-content:center}}
-
-/* lists/tables */
-ul.clean{padding-left:18px;margin:8px 0;color:var(--muted)}
-.table{width:100%;border-collapse:collapse}
-.table th, .table td{padding:10px;border-bottom:1px solid rgba(2,22,45,0.04);text-align:left}
-.small{font-size:13px;color:var(--muted)}
-
-/* footer */
-footer{margin-top:22px;padding-top:12px;border-top:1px dashed rgba(2,22,45,0.06);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-
-/* form */
-.form-row{display:flex;gap:12px;flex-wrap:wrap}
-.form-field{flex:1;display:flex;flex-direction:column;margin-bottom:10px}
-label{font-size:13px;margin-bottom:6px}
-input[type="text"], input[type="email"], textarea, select{
-  padding:10px;border:1px solid rgba(2,22,45,0.08);border-radius:6px;font-size:14px;font-family:inherit;
-}
-textarea{min-height:110px;resize:vertical}
-.button{
-  display:inline-block;padding:10px 14px;border-radius:6px;background:var(--navy);color:var(--cream);text-decoration:none;font-weight:700;
-}
-.button.secondary{background:transparent;border:1px solid rgba(2,22,45,0.08);color:var(--navy);font-weight:600}
-
-.note{font-size:13px;color:var(--muted);}
-
-/* results table editable */
-.results-table tbody tr:hover{background:rgba(0,39,70,0.02)}
+  <script src="scripts.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
